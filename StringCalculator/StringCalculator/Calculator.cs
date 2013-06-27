@@ -46,6 +46,7 @@ namespace StringCalculator
         private void CheckForNegativeNumbers(List<int> negativeNums)
         {
             if (!negativeNums.Any()) return;
+
             Error = string.Empty;
             var isFirst = true;
             foreach (var negativeNum in negativeNums)
@@ -57,7 +58,7 @@ namespace StringCalculator
                 }
                 else
                 {
-                    Error += "," + negativeNum;
+                    Error += string.Format(",{0}", negativeNum);
                 }
                 
             }
